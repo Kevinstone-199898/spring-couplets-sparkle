@@ -47,6 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold-glow))",
+        },
+        lantern: {
+          DEFAULT: "hsl(var(--lantern-red))",
+        },
+        scroll: {
+          DEFAULT: "hsl(var(--scroll-bg))",
+          border: "hsl(var(--scroll-border))",
+        },
+        ink: "hsl(var(--ink))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
