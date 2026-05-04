@@ -120,10 +120,10 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
         </div>
       </div>
 
-      {/* Custom inputs */}
+      {/* 自定义输入 */}
       <div className="space-y-3">
         <div>
-          <label className="text-sm text-muted-foreground">Top Banner</label>
+          <label className="text-sm text-muted-foreground">横批</label>
           <input
             value={couplet.top}
             onChange={(e) => onChange({ ...couplet, top: e.target.value })}
@@ -132,7 +132,7 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
           />
         </div>
         <div>
-          <label className="text-sm text-muted-foreground">First Line (Right)</label>
+          <label className="text-sm text-muted-foreground">上联（右）</label>
           <input
             value={couplet.right}
             onChange={(e) => onChange({ ...couplet, right: e.target.value })}
@@ -141,7 +141,7 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
           />
         </div>
         <div>
-          <label className="text-sm text-muted-foreground">Second Line (Left)</label>
+          <label className="text-sm text-muted-foreground">下联（左）</label>
           <input
             value={couplet.left}
             onChange={(e) => onChange({ ...couplet, left: e.target.value })}
@@ -155,14 +155,14 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
         onClick={handleAddCouplet}
         className="w-full py-2 bg-accent/80 text-accent-foreground font-calligraphy text-lg rounded border border-accent hover:brightness-110 transition-all active:scale-95"
       >
-        ➕ Add to My Couplets
+        ➕ 添加到我的春联
       </button>
 
       <button
         onClick={onDisplay}
         className="w-full py-3 bg-primary text-primary-foreground font-calligraphy text-xl rounded shadow-lantern hover:brightness-110 transition-all active:scale-95"
       >
-        🎆 Display Couplet
+        🎆 展示春联
       </button>
     </div>
   );

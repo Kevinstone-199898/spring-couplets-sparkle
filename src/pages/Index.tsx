@@ -53,10 +53,10 @@ const Index = () => {
           />
         ) : (
           <>
-            {/* Couplet display area */}
+            {/* 春联展示区 */}
             <div className="flex-1 flex items-center justify-center w-full max-w-4xl">
               <div className="flex items-start gap-4 md:gap-12">
-                {/* Right scroll (上联) */}
+                {/* 右联（上联） */}
                 <CoupletScroll
                   text={couplet.right}
                   direction="right"
@@ -64,7 +64,7 @@ const Index = () => {
                   delay={0}
                 />
 
-                {/* Center: top banner */}
+                {/* 中间：横批 */}
                 <div className="flex flex-col items-center gap-6 pt-0">
                   <CoupletScroll
                     text={couplet.top}
@@ -73,7 +73,7 @@ const Index = () => {
                     delay={800}
                   />
 
-                  {/* Big Fu character */}
+                  {/* 大福字 */}
                   <div
                     className={`w-24 h-24 md:w-32 md:h-32 bg-primary rounded-md shadow-lantern flex items-center justify-center transition-all duration-1000 ${
                       showCouplet ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-180 scale-0"
@@ -88,12 +88,12 @@ const Index = () => {
                         transform: "rotate(180deg)",
                       }}
                     >
-                      Fu
+                      福
                     </span>
                   </div>
                 </div>
 
-                {/* Left scroll (下联) */}
+                {/* 左联（下联） */}
                 <CoupletScroll
                   text={couplet.left}
                   direction="left"
@@ -103,20 +103,20 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Back to edit button */}
+            {/* 返回编辑按钮 */}
             <button
               onClick={handleEdit}
               className="mt-8 mb-4 px-6 py-2 bg-muted/50 backdrop-blur text-foreground font-calligraphy text-lg rounded border border-border hover:bg-primary/30 transition-all"
             >
-              ✏️ Edit Again
+              ✏️ 重新编辑
             </button>
 
-            {/* Replay fireworks */}
+            {/* 重放烟花 */}
             <button
               onClick={() => setTrigger((t) => t + 1)}
               className="mb-8 px-6 py-2 bg-primary/80 text-primary-foreground font-calligraphy text-lg rounded shadow-lantern hover:brightness-110 transition-all active:scale-95"
             >
-              🎆 Replay Fireworks
+              🎆 再放烟花
             </button>
           </>
         )}
