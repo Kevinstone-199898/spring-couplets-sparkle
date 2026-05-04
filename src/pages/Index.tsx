@@ -5,9 +5,9 @@ import CoupletEditor from "@/components/CoupletEditor";
 import Lantern from "@/components/Lantern";
 
 const DEFAULT_COUPLET = {
-  top: "福满人间",
-  right: "春回大地千山秀",
-  left: "日照神州万里明",
+  top: "Blessings to All",
+  right: "Spring returns, mountains shine bright",
+  left: "Sun lights the land for miles around",
 };
 
 const Index = () => {
@@ -36,13 +36,13 @@ const Index = () => {
       <ParticleCanvas trigger={trigger} />
 
       {/* Lanterns */}
-      <Lantern side="left" text="福" />
-      <Lantern side="right" text="春" />
+      <Lantern side="left" text="Fu" />
+      <Lantern side="right" text="Spring" />
 
       <div className="relative z-10 flex flex-col items-center min-h-screen py-8 px-4">
         {/* Title */}
         <h1 className="font-calligraphy text-4xl md:text-6xl text-gold-glow mt-6 mb-8 text-center">
-          🏮 春联生成器 🏮
+          🏮 Spring Couplet Generator 🏮
         </h1>
 
         {editing ? (
@@ -88,7 +88,7 @@ const Index = () => {
                         transform: "rotate(180deg)",
                       }}
                     >
-                      福
+                      Fu
                     </span>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ const Index = () => {
               onClick={handleEdit}
               className="mt-8 mb-4 px-6 py-2 bg-muted/50 backdrop-blur text-foreground font-calligraphy text-lg rounded border border-border hover:bg-primary/30 transition-all"
             >
-              ✏️ 重新编辑
+              ✏️ Edit Again
             </button>
 
             {/* Replay fireworks */}
@@ -116,7 +116,7 @@ const Index = () => {
               onClick={() => setTrigger((t) => t + 1)}
               className="mb-8 px-6 py-2 bg-primary/80 text-primary-foreground font-calligraphy text-lg rounded shadow-lantern hover:brightness-110 transition-all active:scale-95"
             >
-              🎆 再放烟花
+              🎆 Replay Fireworks
             </button>
           </>
         )}
