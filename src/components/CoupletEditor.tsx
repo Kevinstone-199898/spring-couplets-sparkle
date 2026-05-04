@@ -7,10 +7,10 @@ interface Couplet {
 }
 
 const DEFAULT_PRESETS: Couplet[] = [
-  { top: "Blessings to All", right: "Spring returns, mountains shine bright", left: "Sun lights the land for miles around" },
-  { top: "All Wishes Come True", right: "Years bring long life and joy", left: "Spring fills the home with blessings" },
-  { top: "Good Fortune", right: "Smooth sailing year after year", left: "All wishes rising step by step" },
-  { top: "Year of Prosperity", right: "Dragons soar bringing endless luck", left: "Phoenix dances through boundless spring" },
+  { top: "万事如意", right: "春回大地千山秀", left: "日照神州万里春" },
+  { top: "心想事成", right: "岁岁年年人长寿", left: "家家户户福满门" },
+  { top: "吉星高照", right: "一帆风顺年年好", left: "万事如意步步高" },
+  { top: "龙年大吉", right: "龙飞凤舞迎新岁", left: "燕语莺歌贺丰年" },
 ];
 
 const STORAGE_KEY = "custom-couplets";
@@ -44,15 +44,15 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
 
   const handleAddCouplet = () => {
     if (!couplet.top.trim() || !couplet.right.trim() || !couplet.left.trim()) {
-      alert("Please fill in the top banner, right scroll, and left scroll first");
+      alert("请先填写横批、上联和下联");
       return;
     }
-    // Check duplicate
+    // 检查重复
     const exists = allCouplets.some(
       (c) => c.top === couplet.top && c.right === couplet.right && c.left === couplet.left
     );
     if (exists) {
-      alert("This couplet already exists in your templates");
+      alert("该春联已存在于您的模板中");
       return;
     }
     const updated = [...customCouplets, { ...couplet }];
@@ -73,11 +73,11 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
 
   return (
     <div className="bg-muted/50 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-border space-y-4 w-full max-w-md">
-      <h2 className="font-calligraphy text-2xl text-accent text-center">Edit Couplet</h2>
+      <h2 className="font-calligraphy text-2xl text-accent text-center">编辑春联</h2>
 
-      {/* Presets */}
+      {/* 预设模板 */}
       <div className="space-y-2">
-        <label className="text-sm text-muted-foreground">Choose a template</label>
+        <label className="text-sm text-muted-foreground">选择模板</label>
         <div className="grid grid-cols-2 gap-2">
           {DEFAULT_PRESETS.map((p, i) => (
             <button
@@ -110,7 +110,7 @@ export default function CoupletEditor({ couplet, onChange, onDisplay }: CoupletE
                   onClick={(e) => handleDeleteCustom(i, e)}
                   className="absolute -top-1 -right-1 w-4 h-4 bg-destructive text-destructive-foreground rounded-full text-[10px] leading-4 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
                   role="button"
-                  aria-label="Delete"
+                  aria-label="删除"
                 >
                   ×
                 </span>

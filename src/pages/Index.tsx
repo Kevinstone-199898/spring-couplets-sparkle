@@ -5,9 +5,9 @@ import CoupletEditor from "@/components/CoupletEditor";
 import Lantern from "@/components/Lantern";
 
 const DEFAULT_COUPLET = {
-  top: "Blessings to All",
-  right: "Spring returns, mountains shine bright",
-  left: "Sun lights the land for miles around",
+  top: "万事如意",
+  right: "春回大地千山秀",
+  left: "日照神州万里春",
 };
 
 const Index = () => {
@@ -36,13 +36,13 @@ const Index = () => {
       <ParticleCanvas trigger={trigger} />
 
       {/* Lanterns */}
-      <Lantern side="left" text="Fu" />
-      <Lantern side="right" text="Spring" />
+      <Lantern side="left" text="福" />
+      <Lantern side="right" text="春" />
 
       <div className="relative z-10 flex flex-col items-center min-h-screen py-8 px-4">
-        {/* Title */}
+        {/* 标题 */}
         <h1 className="font-calligraphy text-4xl md:text-6xl text-gold-glow mt-6 mb-8 text-center">
-          🏮 Spring Couplet Generator 🏮
+          🏮 春联生成器 🏮
         </h1>
 
         {editing ? (
